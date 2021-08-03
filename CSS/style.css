@@ -1,12 +1,59 @@
 body{
-    background-color: rgb(204, 40, 219);
+    background-color: rgb(219, 163, 163);
 }
 .bg-image{ 
-    background-image: url("../Images/maths_op.png"); 
+    background-image: url("../Images/katie-harp-UgrYnA5gwYo-unsplash.jpg");
     height: 100vh;
     filter: blur(8px);
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+.Calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120, auto) repeat(5, 100px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+.Calculator-grid>button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgb(117, 104, 31) ;
+    outline: none;
+    transition: background-color .5s;
+}
+.Calculator-grid>button:hover{
+    background-color: rgb(117, 104, 31);
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1/-1;
+    background-color: rgb(117, 104, 31);
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand{
+    color: rgb(219, 163, 163);
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    color: rgb(219, 163, 163);
+    font-size: 1.5rem;
 }
